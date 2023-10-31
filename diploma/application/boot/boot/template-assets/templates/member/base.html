@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Auth Layout{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('boot-static.static', filename='css/lib/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('boot-static.static', filename='css/auth-base.css') }}">
+    <link  rel="stylesheet" href="{{ url_for('boot-static.static', filename='css/footer.css') }}">
+</head>
+<body>
+
+
+
+<!-- ============ Main Section ============ -->
+<main class="d-flex flex-column align-items-center justify-content-center min-vh-auth">
+    <div class="d-flex w-75 justify-content-center md-flex-column">
+
+        <!-- ============ Left Section ============ -->
+        <div class="w-100 mx-auto d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3 text-max-w-fixed mx-auto">
+                <div>
+                    <h1 class="fs-main-title">Bangla Fighter</h1>
+                    <p class="fs-medium">
+                        Bangla Fighter helps you connect and share with the people in your life.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ============ End of Left Section ============ -->
+
+        <!-- ============ Right Section ============ -->
+        <div class="w-100 mx-auto">
+            <div class="card br-card rounded-0 shadow-lg p-3 auth-max-w-fixed mx-auto mt-3">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <!-- ============ End of Right Section ============ -->
+    </div>
+</main>
+<!-- ============ End of Main Section ============ -->
+
+<!-- ============ Footer Section ============ -->
+<div class="footer container">
+    <div class="d-block text-center d-md-flex align-items-center justify-content-between py-3">
+        <div class="d-inline-flex">
+            <a class="text-secondary footer-item text-decoration-none me-2" href="#">Help</a>
+            <a class="text-secondary footer-item text-decoration-none me-2" href="#">Terms of Use</a>
+            <a class="text-secondary footer-item text-decoration-none me-2" href="#">Privacy Policy</a>
+        </div>
+        <div class="text-secondary footer-item">
+            © Copyright 2023
+            <strong>
+                <a href="https://banglafighter.com/" class="text-decoration-none text-secondary footer-item" target="_blank">
+                    Bangla Fighter
+                </a>
+                <span class="version ms-2">v<span class="fs--1">1.0.0</span></span>
+            </strong>
+        </div>
+    </div>
+</div>
+<!-- ============ End of Footer Section ============ -->
+
+
+<script src="{{ url_for('boot-static.static', filename='js/lib/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+</html>
